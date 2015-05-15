@@ -40,15 +40,18 @@
     float tipCalculation = (billAmount * .15);
     
     NSString *customInput = [self.tipPercentageTextField text];
+    
     float customTipPercentage = [customInput floatValue];
     float customTip = ((customTipPercentage/100)*billAmount);
     
     if ([customInput isEqualToString:@""]) {
         [self.tipAmountLabel setText:[NSString stringWithFormat:@"$%0.2f", tipCalculation]];
+//        self.billAmountTextField.text = [NSString stringWithFormat:@"%0.2f", billAmount];
     } else {
         [self.tipAmountLabel setText:[NSString stringWithFormat:@"$%0.2f",customTip]];
     }
-    
 }
+
+
 
 @end
